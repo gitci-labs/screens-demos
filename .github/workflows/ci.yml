@@ -38,6 +38,8 @@ jobs:
       - run: |
           for demo in minimal todo-basic reader-immersive pro-mac-app; do
             ./screens-tool/.build/debug/gitci-screens build "screens-demos/demos/$demo"
+            ./screens-tool/.build/debug/gitci-screens gallery "screens-demos/demos/$demo"
+            ./screens-tool/.build/debug/gitci-screens archive "screens-demos/demos/$demo"
           done
         env:
           GITCI_SCREENS_JS_WORKSPACE: ${{ github.workspace }}/screens-tool/js
@@ -49,3 +51,10 @@ jobs:
       - run: test -f screens-demos/demos/todo-basic/gitci/screens/build/launch/appstore.iphone.6_9.portrait/01-capture.png
       - run: test -f screens-demos/demos/reader-immersive/gitci/screens/build/launch/appstore.ipad.13.portrait/01-read.png
       - run: test -f screens-demos/demos/pro-mac-app/gitci/screens/build/launch/appstore.mac.16_10/01-workspace.png
+      - run: test -f screens-demos/demos/todo-basic/gitci/screens/build/launch/gallery/index.html
+      - run: test -f screens-demos/demos/reader-immersive/gitci/screens/build/launch.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screens-demo-builds
+          path: screens-demos/demos/*/gitci/screens/build/launch.zip
+          retention-days: 14

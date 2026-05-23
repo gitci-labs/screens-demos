@@ -9,10 +9,12 @@ Included demos:
 - `demos/reader-immersive`: a reading/study app scene set with target-specific feature closeups.
 - `demos/pro-mac-app`: a dark-mode pro workflow scene set spanning mobile, tablet, and desktop.
 
-CI checks the demo against the current `gitci-labs/screens` CLI and bundled template pack. Locally, from the private `gitci-dev` meta repo, you can run:
+CI checks the demos against the current `gitci-labs/screens` CLI and bundled template pack, then uploads zipped screenshot builds as workflow artifacts. Locally, from the private `gitci-dev` meta repo, you can run:
 
 ```sh
 GITCI_SCREENS_JS_WORKSPACE="$PWD/screens/js" \
 GITCI_SCREENS_TEMPLATES_ROOT="$PWD/screens/templates/gitci/screens" \
 screens/.build/debug/gitci-screens build screens-demos/demos/todo-basic
+screens/.build/debug/gitci-screens gallery screens-demos/demos/todo-basic
+screens/.build/debug/gitci-screens archive screens-demos/demos/todo-basic
 ```
