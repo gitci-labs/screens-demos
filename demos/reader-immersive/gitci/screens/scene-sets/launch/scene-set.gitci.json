@@ -30,13 +30,35 @@
         {
           "id": "iphone",
           "sceneTemplate": "gitci.core.feature-closeup",
-          "includeTargets": ["appstore.iphone.*"],
+          "includeTargets": [
+            "appstore.iphone.*"
+          ],
           "props": {
-            "eyebrow": "Read deeply",
-            "headline": "Turn any passage into study material",
-            "subheadline": "Tap words, save discoveries, and keep reading without breaking flow.",
-            "featureTitle": "Instant lookup",
-            "featureBody": "Definitions and notes stay close to the text you care about.",
+            "eyebrow": {
+              "kind": "localized",
+              "key": "read.eyebrow.iphone",
+              "fallback": "Read deeply"
+            },
+            "headline": {
+              "kind": "localized",
+              "key": "read.headline.iphone",
+              "fallback": "Turn any passage into study material"
+            },
+            "subheadline": {
+              "kind": "localized",
+              "key": "read.subheadline.iphone",
+              "fallback": "Tap words, save discoveries, and keep reading without breaking flow."
+            },
+            "featureTitle": {
+              "kind": "localized",
+              "key": "read.featureTitle.iphone",
+              "fallback": "Instant lookup"
+            },
+            "featureBody": {
+              "kind": "localized",
+              "key": "read.featureBody.iphone",
+              "fallback": "Definitions and notes stay close to the text you care about."
+            },
             "screenshot": {
               "kind": "asset",
               "path": "../../assets/iphone/reader.svg",
@@ -48,13 +70,35 @@
         {
           "id": "ipad",
           "sceneTemplate": "gitci.core.feature-closeup",
-          "includeTargets": ["appstore.ipad.*"],
+          "includeTargets": [
+            "appstore.ipad.*"
+          ],
           "props": {
-            "eyebrow": "Study in context",
-            "headline": "Reading and review side by side",
-            "subheadline": "A wider layout makes notes, highlights, and vocabulary visible together.",
-            "featureTitle": "Focused workspace",
-            "featureBody": "Use the same scene template with a target-specific asset and copy.",
+            "eyebrow": {
+              "kind": "localized",
+              "key": "read.eyebrow.ipad",
+              "fallback": "Study in context"
+            },
+            "headline": {
+              "kind": "localized",
+              "key": "read.headline.ipad",
+              "fallback": "Reading and review side by side"
+            },
+            "subheadline": {
+              "kind": "localized",
+              "key": "read.subheadline.ipad",
+              "fallback": "A wider layout makes notes, highlights, and vocabulary visible together."
+            },
+            "featureTitle": {
+              "kind": "localized",
+              "key": "read.featureTitle.ipad",
+              "fallback": "Focused workspace"
+            },
+            "featureBody": {
+              "kind": "localized",
+              "key": "read.featureBody.ipad",
+              "fallback": "Use the same scene template with a target-specific asset and copy."
+            },
             "screenshot": {
               "kind": "asset",
               "path": "../../assets/ipad/study.svg",
@@ -66,13 +110,35 @@
         {
           "id": "mac",
           "sceneTemplate": "gitci.core.feature-closeup",
-          "includeTargets": ["appstore.mac.*"],
+          "includeTargets": [
+            "appstore.mac.*"
+          ],
           "props": {
-            "eyebrow": "Review",
-            "headline": "Keep a library of what you learned",
-            "subheadline": "Mac screenshots can use the same data model with desktop-specific framing.",
-            "featureTitle": "Review dashboard",
-            "featureBody": "This demo uses fake assets only, ready for public examples.",
+            "eyebrow": {
+              "kind": "localized",
+              "key": "read.eyebrow.mac",
+              "fallback": "Review"
+            },
+            "headline": {
+              "kind": "localized",
+              "key": "read.headline.mac",
+              "fallback": "Keep a library of what you learned"
+            },
+            "subheadline": {
+              "kind": "localized",
+              "key": "read.subheadline.mac",
+              "fallback": "Mac screenshots can use the same data model with desktop-specific framing."
+            },
+            "featureTitle": {
+              "kind": "localized",
+              "key": "read.featureTitle.mac",
+              "fallback": "Review dashboard"
+            },
+            "featureBody": {
+              "kind": "localized",
+              "key": "read.featureBody.mac",
+              "fallback": "This demo uses fake assets only, ready for public examples."
+            },
             "screenshot": {
               "kind": "asset",
               "path": "../../assets/mac/library.svg",
@@ -82,6 +148,50 @@
           }
         }
       ]
+    }
+  ],
+  "locales": [
+    {
+      "id": "en-US",
+      "name": "English (US)",
+      "strings": {
+        "read.eyebrow.iphone": "Read deeply",
+        "read.headline.iphone": "Turn any passage into study material",
+        "read.subheadline.iphone": "Tap words, save discoveries, and keep reading without breaking flow.",
+        "read.featureTitle.iphone": "Instant lookup",
+        "read.featureBody.iphone": "Definitions and notes stay close to the text you care about.",
+        "read.eyebrow.ipad": "Study in context",
+        "read.headline.ipad": "Reading and review side by side",
+        "read.subheadline.ipad": "A wider layout makes notes, highlights, and vocabulary visible together.",
+        "read.featureTitle.ipad": "Focused workspace",
+        "read.featureBody.ipad": "Use the same scene template with a target-specific asset and copy.",
+        "read.eyebrow.mac": "Review",
+        "read.headline.mac": "Keep a library of what you learned",
+        "read.subheadline.mac": "Mac screenshots can use the same data model with desktop-specific framing.",
+        "read.featureTitle.mac": "Review dashboard",
+        "read.featureBody.mac": "This demo uses fake assets only, ready for public examples."
+      }
+    },
+    {
+      "id": "ja-JP",
+      "name": "Japanese",
+      "strings": {
+        "read.eyebrow.iphone": "深く読む",
+        "read.headline.iphone": "どんな文章も学習素材に",
+        "read.subheadline.iphone": "単語をタップし、発見を保存し、流れを止めずに読み続ける。",
+        "read.featureTitle.iphone": "すぐに調べる",
+        "read.featureBody.iphone": "定義とメモが、大切な本文のすぐ近くに残ります。",
+        "read.eyebrow.ipad": "文脈で学ぶ",
+        "read.headline.ipad": "読書と復習を並べて表示",
+        "read.subheadline.ipad": "広い画面でノート、ハイライト、語彙をまとめて確認できます。",
+        "read.featureTitle.ipad": "集中できる作業空間",
+        "read.featureBody.ipad": "同じシーンテンプレートで、ターゲット別の素材とコピーを使えます。",
+        "read.eyebrow.mac": "復習",
+        "read.headline.mac": "学んだことをライブラリに",
+        "read.subheadline.mac": "Mac用のスクリーンショットも、同じデータモデルでデスクトップ向けに表現できます。",
+        "read.featureTitle.mac": "復習ダッシュボード",
+        "read.featureBody.mac": "このデモは公開サンプル用の架空アセットだけを使っています。"
+      }
     }
   ]
 }
