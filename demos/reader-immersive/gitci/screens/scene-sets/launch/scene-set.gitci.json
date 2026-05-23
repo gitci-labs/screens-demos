@@ -22,6 +22,26 @@
       "--gitci-color-secondary": "#7c2d12"
     }
   },
+  "variantGroups": [
+    {
+      "id": "baseline",
+      "name": "Baseline",
+      "selections": {
+        "read@appstore.iphone.*": "iphone",
+        "read@appstore.ipad.*": "ipad",
+        "read@appstore.mac.*": "mac"
+      }
+    },
+    {
+      "id": "ppo-a",
+      "name": "Product Page Optimization A",
+      "selections": {
+        "read@appstore.iphone.*": "iphone-conversion",
+        "read@appstore.ipad.*": "ipad",
+        "read@appstore.mac.*": "mac"
+      }
+    }
+  ],
   "slots": [
     {
       "id": "read",
@@ -58,6 +78,46 @@
               "kind": "localized",
               "key": "read.featureBody.iphone",
               "fallback": "Definitions and notes stay close to the text you care about."
+            },
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/iphone/reader.svg",
+              "alt": "Reader app screenshot"
+            },
+            "device": "iphone-2d"
+          }
+        },
+        {
+          "id": "iphone-conversion",
+          "sceneTemplate": "gitci.core.feature-closeup",
+          "includeTargets": [
+            "appstore.iphone.*"
+          ],
+          "props": {
+            "eyebrow": {
+              "kind": "localized",
+              "key": "read.eyebrow.iphone.conversion",
+              "fallback": "Read in flow"
+            },
+            "headline": {
+              "kind": "localized",
+              "key": "read.headline.iphone.conversion",
+              "fallback": "Learn from the articles you already want to read"
+            },
+            "subheadline": {
+              "kind": "localized",
+              "key": "read.subheadline.iphone.conversion",
+              "fallback": "Tap a word, save it, and return to the sentence without losing your place."
+            },
+            "featureTitle": {
+              "kind": "localized",
+              "key": "read.featureTitle.iphone.conversion",
+              "fallback": "Built for momentum"
+            },
+            "featureBody": {
+              "kind": "localized",
+              "key": "read.featureBody.iphone.conversion",
+              "fallback": "Variant groups can test sharper App Store copy while reusing the same screenshots."
             },
             "screenshot": {
               "kind": "asset",
@@ -160,6 +220,11 @@
         "read.subheadline.iphone": "Tap words, save discoveries, and keep reading without breaking flow.",
         "read.featureTitle.iphone": "Instant lookup",
         "read.featureBody.iphone": "Definitions and notes stay close to the text you care about.",
+        "read.eyebrow.iphone.conversion": "Read in flow",
+        "read.headline.iphone.conversion": "Learn from the articles you already want to read",
+        "read.subheadline.iphone.conversion": "Tap a word, save it, and return to the sentence without losing your place.",
+        "read.featureTitle.iphone.conversion": "Built for momentum",
+        "read.featureBody.iphone.conversion": "Variant groups can test sharper App Store copy while reusing the same screenshots.",
         "read.eyebrow.ipad": "Study in context",
         "read.headline.ipad": "Reading and review side by side",
         "read.subheadline.ipad": "A wider layout makes notes, highlights, and vocabulary visible together.",
@@ -181,6 +246,11 @@
         "read.subheadline.iphone": "単語をタップし、発見を保存し、流れを止めずに読み続ける。",
         "read.featureTitle.iphone": "すぐに調べる",
         "read.featureBody.iphone": "定義とメモが、大切な本文のすぐ近くに残ります。",
+        "read.eyebrow.iphone.conversion": "流れを止めずに読む",
+        "read.headline.iphone.conversion": "読みたい記事からそのまま学べる",
+        "read.subheadline.iphone.conversion": "単語をタップして保存し、場所を見失わずに文へ戻れます。",
+        "read.featureTitle.iphone.conversion": "勢いを保つ設計",
+        "read.featureBody.iphone.conversion": "同じスクリーンショットを使いながら、App Store向けコピーを検証できます。",
         "read.eyebrow.ipad": "文脈で学ぶ",
         "read.headline.ipad": "読書と復習を並べて表示",
         "read.subheadline.ipad": "広い画面でノート、ハイライト、語彙をまとめて確認できます。",
