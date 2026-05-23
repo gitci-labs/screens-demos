@@ -14,7 +14,5 @@ CI checks the demos against the current `gitci-labs/screens` CLI and bundled tem
 ```sh
 GITCI_SCREENS_JS_WORKSPACE="$PWD/screens/js" \
 GITCI_SCREENS_TEMPLATES_ROOT="$PWD/screens/templates/gitci/screens" \
-screens/.build/debug/gitci-screens build screens-demos/demos/todo-basic
-screens/.build/debug/gitci-screens gallery screens-demos/demos/todo-basic
-screens/.build/debug/gitci-screens archive screens-demos/demos/todo-basic
+screens/.build/debug/gitci-screens export screens-demos/demos/todo-basic --strict
 ```

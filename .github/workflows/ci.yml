@@ -30,16 +30,14 @@ jobs:
       - run: cd screens-tool && swift build
       - run: |
           for demo in minimal todo-basic reader-immersive pro-mac-app; do
-            ./screens-tool/.build/debug/gitci-screens validate "screens-demos/demos/$demo"
+            ./screens-tool/.build/debug/gitci-screens validate "screens-demos/demos/$demo" --strict
           done
         env:
           GITCI_SCREENS_JS_WORKSPACE: ${{ github.workspace }}/screens-tool/js
           GITCI_SCREENS_TEMPLATES_ROOT: ${{ github.workspace }}/screens-tool/templates/gitci/screens
       - run: |
           for demo in minimal todo-basic reader-immersive pro-mac-app; do
-            ./screens-tool/.build/debug/gitci-screens build "screens-demos/demos/$demo"
-            ./screens-tool/.build/debug/gitci-screens gallery "screens-demos/demos/$demo"
-            ./screens-tool/.build/debug/gitci-screens archive "screens-demos/demos/$demo"
+            ./screens-tool/.build/debug/gitci-screens export "screens-demos/demos/$demo" --strict
           done
         env:
           GITCI_SCREENS_JS_WORKSPACE: ${{ github.workspace }}/screens-tool/js
