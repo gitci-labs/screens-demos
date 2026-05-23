@@ -29,9 +29,10 @@ jobs:
       - run: cd screens-tool/js && pnpm --filter @gitci/screens-renderer-node exec playwright install --with-deps chromium
       - run: cd screens-tool && swift build
       - run: |
-          for demo in minimal todo-basic reader-immersive pro-mac-app; do
+          for demo in minimal todo-basic pro-mac-app; do
             ./screens-tool/.build/debug/gitci-screens validate "screens-demos/demos/$demo" --strict
           done
+          ./screens-tool/.build/debug/gitci-screens validate "screens-demos/demos/reader-immersive" --strict --all-variant-groups
         env:
           GITCI_SCREENS_JS_WORKSPACE: ${{ github.workspace }}/screens-tool/js
           GITCI_SCREENS_TEMPLATES_ROOT: ${{ github.workspace }}/screens-tool/templates/gitci/screens
@@ -40,6 +41,7 @@ jobs:
             ./screens-tool/.build/debug/gitci-screens export "screens-demos/demos/$demo" --strict
           done
           ./screens-tool/.build/debug/gitci-screens export "screens-demos/demos/reader-immersive" --strict --fastlane-out fastlane/screenshots
+          ./screens-tool/.build/debug/gitci-screens export "screens-demos/demos/reader-immersive" --strict --all-variant-groups --skip-archive --skip-gallery
         env:
           GITCI_SCREENS_JS_WORKSPACE: ${{ github.workspace }}/screens-tool/js
           GITCI_SCREENS_TEMPLATES_ROOT: ${{ github.workspace }}/screens-tool/templates/gitci/screens
@@ -50,6 +52,7 @@ jobs:
       - run: test -f screens-demos/demos/todo-basic/gitci/screens/build/launch/appstore.iphone.6_9.portrait/01-capture.png
       - run: test -f screens-demos/demos/reader-immersive/gitci/screens/build/launch/en-US/appstore.ipad.13.portrait/01-read.png
       - run: test -f screens-demos/demos/reader-immersive/gitci/screens/build/launch/ja-JP/appstore.iphone.6_9.portrait/01-read.png
+      - run: test -f screens-demos/demos/reader-immersive/gitci/screens/build/launch/ppo-a/en-US/appstore.iphone.6_9.portrait/01-read.png
       - run: test -f screens-demos/demos/reader-immersive/fastlane/screenshots/ja-JP/01-appstore-iphone-6_9-portrait-read-iphone.png
       - run: test -f screens-demos/demos/pro-mac-app/gitci/screens/build/launch/appstore.mac.16_10/01-workspace.png
       - run: test -f screens-demos/demos/todo-basic/gitci/screens/build/launch/gallery/index.html
