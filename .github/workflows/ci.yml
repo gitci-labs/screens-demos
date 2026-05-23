@@ -38,7 +38,8 @@ jobs:
           GITCI_SCREENS_JS_WORKSPACE: ${{ github.workspace }}/screens-tool/js
           GITCI_SCREENS_TEMPLATES_ROOT: ${{ github.workspace }}/screens-tool/templates/gitci/screens
       - run: |
-          for demo in minimal todo-basic pro-mac-app; do
+          ./screens-tool/.build/debug/gitci-screens export "screens-demos/demos/minimal" --strict --fail-on-overflow
+          for demo in todo-basic pro-mac-app; do
             ./screens-tool/.build/debug/gitci-screens export "screens-demos/demos/$demo" --strict
           done
           ./screens-tool/.build/debug/gitci-screens export "screens-demos/demos/reader-immersive" --strict --fastlane-out fastlane/screenshots

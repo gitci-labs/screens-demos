@@ -40,3 +40,5 @@ GITCI_SCREENS_JS_WORKSPACE="$PWD/screens/js" \
 GITCI_SCREENS_TEMPLATES_ROOT="$PWD/screens/templates/gitci/screens" \
 screens/.build/debug/gitci-screens validate screens-demos/demos/reader-immersive --strict --overflow-locale
 ```
+
+The minimal demo is also rendered in CI with `--fail-on-overflow` so wide split-scene templates keep proving that their content fits inside the upload frames.
