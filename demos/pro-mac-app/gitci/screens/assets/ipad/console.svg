@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1366" viewBox="0 0 1024 1366">
+  <rect width="1024" height="1366" fill="#09090B"/>
+  <rect x="58" y="76" width="908" height="1214" rx="42" fill="#18181B"/>
+  <text x="104" y="156" fill="#FAFAFA" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700">Deployment Console</text>
+  <rect x="104" y="230" width="390" height="210" rx="32" fill="#052E16"/>
+  <rect x="536" y="230" width="384" height="210" rx="32" fill="#082F49"/>
+  <rect x="104" y="502" width="816" height="548" rx="32" fill="#27272A"/>
+  <g fill="#A1A1AA">
+    <rect x="152" y="574" width="660" height="20" rx="10"/>
+    <rect x="152" y="652" width="540" height="20" rx="10"/>
+    <rect x="152" y="730" width="700" height="20" rx="10"/>
+    <rect x="152" y="808" width="460" height="20" rx="10"/>
+  </g>
+</svg>

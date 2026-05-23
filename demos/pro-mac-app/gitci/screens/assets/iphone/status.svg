@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <rect width="390" height="844" rx="44" fill="#111827"/>
+  <text x="32" y="88" fill="#FAFAFA" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Builds</text>
+  <rect x="32" y="126" width="326" height="104" rx="28" fill="#052E16"/>
+  <text x="58" y="188" fill="#86EFAC" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Production healthy</text>
+  <g fill="#1F2937">
+    <rect x="32" y="274" width="326" height="88" rx="24"/>
+    <rect x="32" y="394" width="326" height="88" rx="24"/>
+    <rect x="32" y="514" width="326" height="88" rx="24"/>
+  </g>
+  <g fill="#22C55E">
+    <circle cx="68" cy="318" r="11"/>
+    <circle cx="68" cy="438" r="11"/>
+    <circle cx="68" cy="558" r="11"/>
+  </g>
+</svg>

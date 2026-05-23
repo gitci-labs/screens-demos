@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1366" viewBox="0 0 1024 1366">
+  <rect width="1024" height="1366" fill="#F8FAFC"/>
+  <text x="72" y="112" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">Project Board</text>
+  <g transform="translate(72 174)">
+    <rect width="252" height="980" rx="34" fill="#E0F2FE"/>
+    <rect x="314" width="252" height="980" rx="34" fill="#DCFCE7"/>
+    <rect x="628" width="252" height="980" rx="34" fill="#FEF3C7"/>
+    <g fill="#FFFFFF">
+      <rect x="28" y="92" width="196" height="150" rx="28"/>
+      <rect x="28" y="276" width="196" height="150" rx="28"/>
+      <rect x="342" y="92" width="196" height="150" rx="28"/>
+      <rect x="342" y="276" width="196" height="150" rx="28"/>
+      <rect x="656" y="92" width="196" height="150" rx="28"/>
+    </g>
+  </g>
+</svg>

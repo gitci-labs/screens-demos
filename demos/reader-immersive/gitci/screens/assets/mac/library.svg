@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <rect width="1440" height="900" fill="#FFFBEB"/>
+  <rect x="52" y="54" width="340" height="792" rx="36" fill="#431407"/>
+  <rect x="432" y="54" width="956" height="792" rx="36" fill="#FFFFFF"/>
+  <text x="100" y="128" fill="#FED7AA" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">Library</text>
+  <text x="500" y="138" fill="#1C1917" font-family="Georgia, serif" font-size="54" font-weight="700">Review Queue</text>
+  <g fill="#FEE2E2">
+    <rect x="500" y="214" width="800" height="96" rx="24"/>
+    <rect x="500" y="344" width="800" height="96" rx="24"/>
+    <rect x="500" y="474" width="800" height="96" rx="24"/>
+    <rect x="500" y="604" width="800" height="96" rx="24"/>
+  </g>
+</svg>

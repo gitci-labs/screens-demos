@@ -1,0 +1,81 @@
+{
+  "$schema": "https://screens.gitci.com/schemas/scene-set.gitci.schema.json",
+  "schemaVersion": 1,
+  "id": "launch",
+  "name": "Pro Mac Launch",
+  "entry": "./scene-set.tsx",
+  "export": "sceneSet",
+  "targets": [
+    "appstore.iphone.6_9.portrait",
+    "appstore.ipad.13.portrait",
+    "appstore.mac.16_10"
+  ],
+  "appearanceByTarget": {
+    "appstore.*": "dark"
+  },
+  "theme": {
+    "id": "gitci.theme.clean-editorial",
+    "overrides": {
+      "--gitci-color-bg": "#09090b",
+      "--gitci-color-fg": "#fafafa",
+      "--gitci-color-primary": "#22c55e",
+      "--gitci-color-secondary": "#38bdf8"
+    }
+  },
+  "slots": [
+    {
+      "id": "workspace",
+      "label": "Workspace",
+      "variants": [
+        {
+          "id": "iphone",
+          "sceneTemplate": "gitci.core.hero-device",
+          "includeTargets": ["appstore.iphone.*"],
+          "props": {
+            "headline": "Monitor builds from anywhere",
+            "subheadline": "A compact companion view for the automation that matters.",
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/iphone/status.svg",
+              "alt": "Build monitor phone screenshot"
+            },
+            "device": "iphone-2d",
+            "devicePose": "front"
+          }
+        },
+        {
+          "id": "ipad",
+          "sceneTemplate": "gitci.core.hero-device",
+          "includeTargets": ["appstore.ipad.*"],
+          "props": {
+            "headline": "Review deployment state in detail",
+            "subheadline": "Dashboards can adapt to large touch screens without separate tools.",
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/ipad/console.svg",
+              "alt": "Build console tablet screenshot"
+            },
+            "device": "ipad-2d",
+            "devicePose": "tilt-left"
+          }
+        },
+        {
+          "id": "mac",
+          "sceneTemplate": "gitci.core.hero-device",
+          "includeTargets": ["appstore.mac.*"],
+          "props": {
+            "headline": "Operate a pro workflow on macOS",
+            "subheadline": "Wide screenshots can emphasize dense, real desktop surfaces.",
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/mac/workspace.svg",
+              "alt": "Professional Mac workspace screenshot"
+            },
+            "device": "mac-2d",
+            "devicePose": "front"
+          }
+        }
+      ]
+    }
+  ]
+}

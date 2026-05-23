@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  minimal:
+  demos:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,11 +28,17 @@ jobs:
       - run: cd screens-tool/js && pnpm build
       - run: cd screens-tool/js && pnpm --filter @gitci/screens-renderer-node exec playwright install --with-deps chromium
       - run: cd screens-tool && swift build
-      - run: ./screens-tool/.build/debug/gitci-screens validate screens-demos/demos/minimal
+      - run: |
+          for demo in minimal todo-basic reader-immersive pro-mac-app; do
+            ./screens-tool/.build/debug/gitci-screens validate "screens-demos/demos/$demo"
+          done
         env:
           GITCI_SCREENS_JS_WORKSPACE: ${{ github.workspace }}/screens-tool/js
           GITCI_SCREENS_TEMPLATES_ROOT: ${{ github.workspace }}/screens-tool/templates/gitci/screens
-      - run: ./screens-tool/.build/debug/gitci-screens build screens-demos/demos/minimal
+      - run: |
+          for demo in minimal todo-basic reader-immersive pro-mac-app; do
+            ./screens-tool/.build/debug/gitci-screens build "screens-demos/demos/$demo"
+          done
         env:
           GITCI_SCREENS_JS_WORKSPACE: ${{ github.workspace }}/screens-tool/js
           GITCI_SCREENS_TEMPLATES_ROOT: ${{ github.workspace }}/screens-tool/templates/gitci/screens
@@ -40,3 +46,6 @@ jobs:
       - run: test -f screens-demos/demos/minimal/gitci/screens/build/launch/appstore.iphone.6_9.portrait/04-span-2.png
       - run: test -f screens-demos/demos/minimal/gitci/screens/build/launch/appstore.ipad.13.portrait/04-span-2.png
       - run: test -f screens-demos/demos/minimal/gitci/screens/build/launch/appstore.mac.16_10/03-span.png
+      - run: test -f screens-demos/demos/todo-basic/gitci/screens/build/launch/appstore.iphone.6_9.portrait/01-capture.png
+      - run: test -f screens-demos/demos/reader-immersive/gitci/screens/build/launch/appstore.ipad.13.portrait/01-read.png
+      - run: test -f screens-demos/demos/pro-mac-app/gitci/screens/build/launch/appstore.mac.16_10/01-workspace.png

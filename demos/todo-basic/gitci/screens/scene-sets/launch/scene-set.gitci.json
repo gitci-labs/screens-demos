@@ -1,0 +1,81 @@
+{
+  "$schema": "https://screens.gitci.com/schemas/scene-set.gitci.schema.json",
+  "schemaVersion": 1,
+  "id": "launch",
+  "name": "Todo Basic Launch",
+  "entry": "./scene-set.tsx",
+  "export": "sceneSet",
+  "targets": [
+    "appstore.iphone.6_9.portrait",
+    "appstore.ipad.13.portrait",
+    "appstore.mac.16_10"
+  ],
+  "appearanceByTarget": {
+    "appstore.*": "light"
+  },
+  "theme": {
+    "id": "gitci.theme.clean-editorial",
+    "overrides": {
+      "--gitci-color-bg": "#f7fbff",
+      "--gitci-color-fg": "#0f172a",
+      "--gitci-color-primary": "#2563eb",
+      "--gitci-color-secondary": "#0f766e"
+    }
+  },
+  "slots": [
+    {
+      "id": "capture",
+      "label": "Capture",
+      "variants": [
+        {
+          "id": "iphone",
+          "sceneTemplate": "gitci.core.hero-device",
+          "includeTargets": ["appstore.iphone.*"],
+          "props": {
+            "headline": "Plan the day in one calm list",
+            "subheadline": "Capture tasks, order priorities, and move through the work.",
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/iphone/inbox.svg",
+              "alt": "Todo inbox screenshot"
+            },
+            "device": "iphone-2d",
+            "devicePose": "tilt-right"
+          }
+        },
+        {
+          "id": "ipad",
+          "sceneTemplate": "gitci.core.hero-device",
+          "includeTargets": ["appstore.ipad.*"],
+          "props": {
+            "headline": "Turn scattered tasks into a focused board",
+            "subheadline": "Group projects, scan progress, and keep your next action visible.",
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/ipad/board.svg",
+              "alt": "Todo board screenshot"
+            },
+            "device": "ipad-2d",
+            "devicePose": "front"
+          }
+        },
+        {
+          "id": "mac",
+          "sceneTemplate": "gitci.core.hero-device",
+          "includeTargets": ["appstore.mac.*"],
+          "props": {
+            "headline": "A desktop command center for your week",
+            "subheadline": "Review projects, deadlines, and completed work from one dashboard.",
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/mac/dashboard.svg",
+              "alt": "Todo dashboard screenshot"
+            },
+            "device": "mac-2d",
+            "devicePose": "front"
+          }
+        }
+      ]
+    }
+  ]
+}

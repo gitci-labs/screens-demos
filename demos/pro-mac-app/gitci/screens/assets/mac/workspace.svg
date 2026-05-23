@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <rect width="1440" height="900" fill="#09090B"/>
+  <rect x="40" y="44" width="1360" height="812" rx="34" fill="#18181B"/>
+  <rect x="80" y="90" width="280" height="720" rx="28" fill="#27272A"/>
+  <rect x="400" y="90" width="440" height="330" rx="28" fill="#052E16"/>
+  <rect x="880" y="90" width="440" height="330" rx="28" fill="#082F49"/>
+  <rect x="400" y="464" width="920" height="346" rx="28" fill="#27272A"/>
+  <text x="112" y="158" fill="#FAFAFA" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">Pipelines</text>
+  <g fill="#A1A1AA">
+    <rect x="448" y="534" width="760" height="18" rx="9"/>
+    <rect x="448" y="608" width="650" height="18" rx="9"/>
+    <rect x="448" y="682" width="820" height="18" rx="9"/>
+    <rect x="448" y="756" width="520" height="18" rx="9"/>
+  </g>
+</svg>

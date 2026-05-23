@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1366" viewBox="0 0 1024 1366">
+  <rect width="1024" height="1366" fill="#FFFBEB"/>
+  <rect x="68" y="86" width="566" height="1090" rx="38" fill="#FFFFFF"/>
+  <rect x="674" y="86" width="282" height="1090" rx="38" fill="#431407"/>
+  <text x="116" y="170" fill="#1C1917" font-family="Georgia, serif" font-size="48" font-weight="700">Chapter Notes</text>
+  <g fill="#57534E" font-family="Georgia, serif" font-size="30">
+    <text x="116" y="260">Reading should stay fluid,</text>
+    <text x="116" y="316">even when the material is</text>
+    <text x="116" y="372">dense and unfamiliar.</text>
+    <text x="116" y="492">Highlights become cards,</text>
+    <text x="116" y="548">and cards keep their source.</text>
+  </g>
+  <g fill="#FED7AA">
+    <rect x="720" y="168" width="190" height="26" rx="13"/>
+    <rect x="720" y="240" width="160" height="26" rx="13"/>
+    <rect x="720" y="312" width="210" height="26" rx="13"/>
+  </g>
+</svg>

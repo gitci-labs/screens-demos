@@ -1,0 +1,87 @@
+{
+  "$schema": "https://screens.gitci.com/schemas/scene-set.gitci.schema.json",
+  "schemaVersion": 1,
+  "id": "launch",
+  "name": "Reader Immersive Launch",
+  "entry": "./scene-set.tsx",
+  "export": "sceneSet",
+  "targets": [
+    "appstore.iphone.6_9.portrait",
+    "appstore.ipad.13.portrait",
+    "appstore.mac.16_10"
+  ],
+  "appearanceByTarget": {
+    "appstore.*": "light"
+  },
+  "theme": {
+    "id": "gitci.theme.clean-editorial",
+    "overrides": {
+      "--gitci-color-bg": "#fff7ed",
+      "--gitci-color-fg": "#1c1917",
+      "--gitci-color-primary": "#dc2626",
+      "--gitci-color-secondary": "#7c2d12"
+    }
+  },
+  "slots": [
+    {
+      "id": "read",
+      "label": "Reading",
+      "variants": [
+        {
+          "id": "iphone",
+          "sceneTemplate": "gitci.core.feature-closeup",
+          "includeTargets": ["appstore.iphone.*"],
+          "props": {
+            "eyebrow": "Read deeply",
+            "headline": "Turn any passage into study material",
+            "subheadline": "Tap words, save discoveries, and keep reading without breaking flow.",
+            "featureTitle": "Instant lookup",
+            "featureBody": "Definitions and notes stay close to the text you care about.",
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/iphone/reader.svg",
+              "alt": "Reader app screenshot"
+            },
+            "device": "iphone-2d"
+          }
+        },
+        {
+          "id": "ipad",
+          "sceneTemplate": "gitci.core.feature-closeup",
+          "includeTargets": ["appstore.ipad.*"],
+          "props": {
+            "eyebrow": "Study in context",
+            "headline": "Reading and review side by side",
+            "subheadline": "A wider layout makes notes, highlights, and vocabulary visible together.",
+            "featureTitle": "Focused workspace",
+            "featureBody": "Use the same scene template with a target-specific asset and copy.",
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/ipad/study.svg",
+              "alt": "Reader study workspace screenshot"
+            },
+            "device": "ipad-2d"
+          }
+        },
+        {
+          "id": "mac",
+          "sceneTemplate": "gitci.core.feature-closeup",
+          "includeTargets": ["appstore.mac.*"],
+          "props": {
+            "eyebrow": "Review",
+            "headline": "Keep a library of what you learned",
+            "subheadline": "Mac screenshots can use the same data model with desktop-specific framing.",
+            "featureTitle": "Review dashboard",
+            "featureBody": "This demo uses fake assets only, ready for public examples.",
+            "screenshot": {
+              "kind": "asset",
+              "path": "../../assets/mac/library.svg",
+              "alt": "Reader library screenshot"
+            },
+            "device": "mac-2d"
+          }
+        }
+      ]
+    }
+  ]
+}
