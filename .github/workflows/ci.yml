@@ -33,6 +33,7 @@ jobs:
             ./screens-tool/.build/debug/gitci-screens validate "screens-demos/demos/$demo" --strict
           done
           ./screens-tool/.build/debug/gitci-screens validate "screens-demos/demos/reader-immersive" --strict --all-variant-groups
+          ./screens-tool/.build/debug/gitci-screens validate "screens-demos/demos/reader-immersive" --strict --overflow-locale
         env:
           GITCI_SCREENS_JS_WORKSPACE: ${{ github.workspace }}/screens-tool/js
           GITCI_SCREENS_TEMPLATES_ROOT: ${{ github.workspace }}/screens-tool/templates/gitci/screens

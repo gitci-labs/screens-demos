@@ -32,3 +32,11 @@ GITCI_SCREENS_JS_WORKSPACE="$PWD/screens/js" \
 GITCI_SCREENS_TEMPLATES_ROOT="$PWD/screens/templates/gitci/screens" \
 screens/.build/debug/gitci-screens export screens-demos/demos/reader-immersive --strict --all-variant-groups
 ```
+
+To stress localized text containers with deliberately long synthetic copy:
+
+```sh
+GITCI_SCREENS_JS_WORKSPACE="$PWD/screens/js" \
+GITCI_SCREENS_TEMPLATES_ROOT="$PWD/screens/templates/gitci/screens" \
+screens/.build/debug/gitci-screens validate screens-demos/demos/reader-immersive --strict --overflow-locale
+```
