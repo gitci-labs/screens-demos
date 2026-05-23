@@ -58,7 +58,8 @@ jobs:
       - run: test -f screens-demos/demos/reader-immersive/variant-fastlane/screenshots/ppo-a/en-US/01-appstore-iphone-6_9-portrait-read-iphone-conversion.png
       - run: test -f screens-demos/demos/pro-mac-app/gitci/screens/build/launch/appstore.mac.16_10/01-workspace.png
       - run: test -f screens-demos/demos/todo-basic/gitci/screens/build/launch/gallery/index.html
-      - run: grep -q '"isFirstThree" : true' screens-demos/demos/todo-basic/gitci/screens/build/launch/gallery/data/built-outputs.json
+      - run: |
+          grep -q '"isFirstThree" : true' screens-demos/demos/todo-basic/gitci/screens/build/launch/gallery/data/built-outputs.json
       - run: test -f screens-demos/demos/reader-immersive/gitci/screens/build/launch.zip
       - uses: actions/upload-artifact@v4
         with:
